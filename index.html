@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Updatehosts : 自动更新hosts">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Updatehosts</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/ladder1984/updateHosts">View on GitHub</a>
+
+          <h1 id="project_title">Updatehosts</h1>
+          <h2 id="project_tagline">自动更新hosts</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/ladder1984/updateHosts/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/ladder1984/updateHosts/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="updatehosts" class="anchor" href="#updatehosts" aria-hidden="true"><span class="octicon octicon-link"></span></a>updateHosts</h1>
+
+<h2>
+<a id="简介" class="anchor" href="#%E7%AE%80%E4%BB%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>简介</h2>
+
+<p>自动从网络下载hosts文件，hosts源由用户设置。</p>
+
+<h3>
+<a id="hosts是什么" class="anchor" href="#hosts%E6%98%AF%E4%BB%80%E4%B9%88" aria-hidden="true"><span class="octicon octicon-link"></span></a>hosts是什么？</h3>
+
+<blockquote>
+<p>hosts文件是一个用于储存计算机网络中各节点信息的计算机文件。这个文件负责将主机名映射到相应的IP地址。hosts文件通常用于补充或取代网络中DNS的功能。和DNS不同的是，计算机的用户可以直接对hosts文件进行控制。 ——<a href="http://zh.wikipedia.org/zh-cn/Hosts%E6%96%87%E4%BB%B6" title="hosts文件 - 维基百科，自由的百科全书">hosts文件 - 维基百科，自由的百科全书</a></p>
+</blockquote>
+
+<h3>
+<a id="hosts的功能" class="anchor" href="#hosts%E7%9A%84%E5%8A%9F%E8%83%BD" aria-hidden="true"><span class="octicon octicon-link"></span></a>hosts的功能</h3>
+
+<blockquote>
+<p>hosts文件也可以用于其它情况，例如可以将已知的广告服务器重定向到无广告的机器（通常是本地的IP地址：127.0.0.1）上来过滤广告。同时也可以通过不下载网络广告，从而减少带宽。使用hosts文件还可以减少对DNS服务器的访问来加快访问速度并减少带宽消耗。</p>
+
+<p>hosts文件的另一个重要用途就是用于拦截一些恶意网站的请求，从而防止访问欺诈网站或感染一些病毒或恶意软件。但同时，这个文件也可能被病毒或恶意软件所利用来阻止用户更新杀毒软件或访问特定网站。</p>
+
+<p>在中国大陆，由于防火长城的DNS劫持，有一些网民也借使用hosts文件来强制将特定网站指定到未封锁的IP上。例如网络上有很多教授修改hosts文件来访问Google搜索的教程。比如就有维基媒体基金会的图片服务器IP地址被ISP封锁，通过修改hosts文件以正常显示图片的方法流传。  ——<a href="http://zh.wikipedia.org/zh-cn/Hosts%E6%96%87%E4%BB%B6" title="hosts文件 - 维基百科，自由的百科全书">hosts文件 - 维基百科，自由的百科全书</a></p>
+</blockquote>
+
+<h3>
+<a id="updatehosts的功能" class="anchor" href="#updatehosts%E7%9A%84%E5%8A%9F%E8%83%BD" aria-hidden="true"><span class="octicon octicon-link"></span></a>updateHosts的功能</h3>
+
+<p>updateHosts可以自动从网络下载最新的hosts文件，并自动替换系统的hosts文件。更多更能请见下文描述。</p>
+
+<h2>
+<a id="使用说明" class="anchor" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>使用说明</h2>
+
+<p>下载地址：<a href="https://github.com/ladder1984/updateHosts/archive/master.zip">https://github.com/ladder1984/updateHosts/archive/master.zip</a> 解压即可使用。</p>
+
+<h3>
+<a id="运行方法" class="anchor" href="#%E8%BF%90%E8%A1%8C%E6%96%B9%E6%B3%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>运行方法</h3>
+
+<ul>
+<li>
+<strong>Windows用户</strong>：点击<strong>start.vbs</strong>运行，点击<strong>addToStartup.js</strong>加入启动项。无须安装Python。</li>
+<li>
+<strong>Linux/Mac OS用户</strong>：如未安装Python，请自行安装Python 2.x。点击<strong>updateHosts.py</strong>执行程序。</li>
+</ul>
+
+<h3>
+<a id="文件说明" class="anchor" href="#%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>文件说明</h3>
+
+<ul>
+<li>
+<strong>config.ini：</strong> 设置参数，包括选择更新源、开启关闭功能。详见config.ini中的注释 </li>
+<li>
+<strong>hosts_user_defined.txt：</strong> 可填入自定义hosts内容</li>
+</ul>
+
+<h3>
+<a id="设置说明" class="anchor" href="#%E8%AE%BE%E7%BD%AE%E8%AF%B4%E6%98%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>设置说明</h3>
+
+<p>目前可以在config.ini文件中方设置功能。0为不开启，1为开启此功能。目前可设置的功能有：</p>
+
+<ul>
+<li>not_block_sites 开启后，将注释掉通过127.0.0.1屏蔽的网址</li>
+<li>always_on 开启后，将常驻内存，每小时执行一次更新</li>
+</ul>
+
+<h3>
+<a id="注意事项" class="anchor" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>注意事项：</h3>
+
+<ul>
+<li>如果不确定是否更新成功，可查看hosts文件，Windows系统通常在C:\Windows\System32\drivers\etc下的hosts文件。</li>
+<li>本软件不提供hosts文件，而是从从用户定义的地址下载hosts，默认提供几个流行的hosts，参见config.ini</li>
+<li>建议使用前手动备份hosts文件</li>
+<li>Windows用户可能需要授予程序管理员权限：右击python27.exe，选中“属性”，在“兼容性”里勾选“以管理员身份运行此程序”。</li>
+<li>建议使用Notepad++、Sublime Text编辑文件</li>
+<li>删除启动项（Windows用户）：删除“启动”文件夹内的快捷方式，“启动”文件夹在开始菜单内</li>
+</ul>
+
+<h2>
+<a id="运行环境" class="anchor" href="#%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83" aria-hidden="true"><span class="octicon octicon-link"></span></a>运行环境</h2>
+
+<ul>
+<li>操作系统：Windows、Linux、Mac OS</li>
+</ul>
+
+<h2>
+<a id="功能描述" class="anchor" href="#%E5%8A%9F%E8%83%BD%E6%8F%8F%E8%BF%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>功能描述</h2>
+
+<ul>
+<li>下载hosts文件并更新本地hosts</li>
+<li>用户可自定义hosts内容</li>
+<li>可选的hosts更新源</li>
+<li>可以选择下载多个hosts文件并合并</li>
+<li>备份hosts文件</li>
+<li>可去除屏蔽广告部分</li>
+<li>可常驻后台，可每小时执行一次</li>
+<li>分离出单独的配置文件</li>
+<li>运行时不显示窗口</li>
+<li>打包成exe文件，无需安装python即可使用</li>
+<li>可单文件执行updateHosts</li>
+<li>可添加启动项</li>
+<li>生成错误日志errorLog.txt</li>
+<li>待添加</li>
+</ul>
+
+<h2>
+<a id="hosts源" class="anchor" href="#hosts%E6%BA%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>hosts源</h2>
+
+<p>hosts源来源于网络，收录入<a href="https://github.com/ladder1984/someHosts">someHosts</a>项目，并选取如下hosts：</p>
+
+<ul>
+<li>simpleu-hosts <a href="https://github.com/vokins/simpleu">https://github.com/vokins/simpleu</a>
+</li>
+<li>google-hosts <a href="https://github.com/txthinking/google-hosts">https://github.com/txthinking/google-hosts</a>
+</li>
+<li>GavinHosts <a href="http://blog.crpuer.com/GavinHosts.txt">http://blog.crpuer.com/GavinHosts.txt</a>
+</li>
+<li>General Hosts (ghosts) <a href="http://h.heartnn.eu.org/hosts">http://h.heartnn.eu.org/hosts</a>
+</li>
+<li>imouto.host <a href="https://github.com/zxdrive/imouto.host">https://github.com/zxdrive/imouto.host</a>
+</li>
+</ul>
+
+<p>用户可在config.ini中选择，或者自定义hosts源。</p>
+
+<h2>
+<a id="其他" class="anchor" href="#%E5%85%B6%E4%BB%96" aria-hidden="true"><span class="octicon octicon-link"></span></a>其他</h2>
+
+<ul>
+<li>updateHosts项目地址：<a href="https://github.com/ladder1984/updateHosts">https://github.com/ladder1984/updateHosts</a>
+</li>
+<li>ChangeLog：<a href="https://github.com/ladder1984/updateHosts/blob/master/ChangeLog.txt">https://github.com/ladder1984/updateHosts/blob/master/ChangeLog.txt</a>
+</li>
+<li>作者：<a href="https://github.com/ladder1984">https://github.com/ladder1984</a> 博客：<a href="http://www.itoldme.net">http://www.itoldme.net</a>
+</li>
+<li>欢迎反馈问题和建议，地址：<a href="https://github.com/ladder1984/updateHosts/issues">https://github.com/ladder1984/updateHosts/issues</a>
+</li>
+</ul>
+
+<h2>
+<a id="版权声明" class="anchor" href="#%E7%89%88%E6%9D%83%E5%A3%B0%E6%98%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>版权声明</h2>
+
+<ul>
+<li>本软件使用MIT协议</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Updatehosts maintained by <a href="https://github.com/ladder1984">ladder1984</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
